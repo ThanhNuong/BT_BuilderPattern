@@ -15,18 +15,16 @@ public class MainBai3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-//        ShapeStore store1 = new CircleStore();
-//        Shape shape1 = store1.kindShape(ShapeType.Circle);
-//        System.out.println(shape1.toString());
+        ShapeFactory hop1 = new ShapeFactory().createInstance();
+        ShapeFactory hop2 = new ShapeFactory().createInstance();
+        ShapeFactory hop3 = new ShapeFactory().createInstance();
         
-//        ShapeStore store2 = new TriangleStore();
-//        Shape shape2 = store2.kindShape(ShapeType.Triangle);
-//        System.out.println(shape2.toString());
-//        
-         ShapeStore store = new RectangleStore();
-        Shape shape = store.kindShape(ShapeType.Rectangle);
-        System.out.println(shape.toString());
+        Shape Hinh1 = hop1.createShape(ShapeType.Circle);
+        System.out.println(Hinh1.draw());
+        Shape Hinh2 = hop2.createShape(ShapeType.Triangle);
+        System.out.println(Hinh2.draw());
+        Shape Hinh3 = hop3.createShape(ShapeType.Rectangle);
+        System.out.println(Hinh3.draw());
     }
     
 }

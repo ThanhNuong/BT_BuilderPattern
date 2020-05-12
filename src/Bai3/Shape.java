@@ -6,16 +6,12 @@
 package Bai3;
 
 public abstract class Shape {
-    protected String brush, paper, frame;
+     String brush, paper, frame;
 
     public Shape() {
     }
     
     public abstract String draw();
 
-    @Override
-    public String toString() {
-        return "Shape{" + "brush=" + brush + ", paper=" + paper + ", frame=" + frame + '}';
-    }
-    
+   
 }

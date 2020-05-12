@@ -11,22 +11,19 @@ package Bai3;
  */
 public class Circle extends Shape{
 
-    private static Circle instance;
+    public Circle() {
+        System.out.println("Day la hinh tron");
+    }
 
-    protected Circle() {
-        brush = "Brush của đối tượng Circle";
-        paper = "paper của Circle";
-        frame = "frame của Circle";
-    }
     
-    public static Circle createinstance(){
-        if(instance==null)
-            instance = new Circle();
-        return instance;
-    }
     
-    @Override
+   @Override
     public String draw() {
-        return "Vẽ theo đối tượng Circle";
+        brush ="\nVẽ bằng";
+        paper ="\nVẽ giấy ";
+        frame ="\nVẽ khung ";
+        
+        return brush + paper + frame;
     }
+   
 }

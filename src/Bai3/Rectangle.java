@@ -11,23 +11,22 @@ package Bai3;
  */
 public class Rectangle extends Shape{
 
-    private static Rectangle instance;
+    public Rectangle() {
+        System.out.println("Đây là hình chữ nhật");
+    }
 
-    protected Rectangle() {
-        brush = "Brush của đối tượng Rectangle";
-        paper = "paper của Rectangle";
-        frame = "frame của Rectangle";
-    }
     
-    public static Rectangle createinstance(){
-        if(instance == null)
-            instance = new Rectangle();
-        return instance;
-    }
     
-    @Override
+   @Override
     public String draw() {
-       return "Vẽ theo đối tượng Rectangle";
+        brush ="\nVẽ bằng";
+        paper ="\nVẽ giấy ";
+        frame ="\nVẽ khung ";
+        
+        return brush + paper + frame;
     }
+   
+
+   
     
 }

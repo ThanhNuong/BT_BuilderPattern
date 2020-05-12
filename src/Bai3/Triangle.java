@@ -10,24 +10,21 @@ package Bai3;
  * @author Admin
  */
 public class Triangle extends Shape{
-    
-    private static Triangle instance;
 
-    protected Triangle() {
-        brush = "Brush của đối tượng Triangle";
-        paper = "paper của Triangle";
-        frame = "frame của Triangle";
+    public Triangle() {
+        System.out.println("Đây là hình tam giác");
     }
     
-    public static Triangle createinstance(){
-        if(instance==null)
-            instance = new Triangle();
-        return instance;
-    }
+   
     
-    @Override
+   @Override
     public String draw() {
-        return "Vẽ theo đối tượng Triangle";
+        brush ="\nVẽ bằng";
+        paper ="\nVẽ giấy ";
+        frame ="\nVẽ khung ";
+        
+        return brush + paper + frame;
     }
+   
     
 }
