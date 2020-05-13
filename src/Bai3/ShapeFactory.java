@@ -10,6 +10,16 @@ package Bai3;
  * @author Admin
  */
 public  class ShapeFactory {
+    
+    public static ShapeFactory instance;
+        
+        public static ShapeFactory createInstance()
+        {
+            if(instance == null)
+                instance = new ShapeFactory();
+                return instance;
+        }
+        
     public Shape createShape(ShapeType type)
     {
         switch(type)
@@ -20,13 +30,4 @@ public  class ShapeFactory {
                     
         }return null;
     }
-    
-    public static ShapeFactory instance;
-        
-        public static ShapeFactory createInstance()
-        {
-            if(instance == null)
-                instance = new ShapeFactory();
-                return instance;
-        }
 }

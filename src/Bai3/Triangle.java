@@ -12,19 +12,14 @@ package Bai3;
 public class Triangle extends Shape{
 
     public Triangle() {
-        System.out.println("Đây là hình tam giác");
+        System.out.println("\nChào các bạn!  Đây là hình Triangle");
     }
-    
-   
-    
+
    @Override
     public String draw() {
-        brush ="\nVẽ bằng";
-        paper ="\nVẽ giấy ";
-        frame ="\nVẽ khung ";
-        
+        brush ="Chuẩn bị vẽ bằng bút chì màu xanh";
+        paper ="\nchuẩn bị giấy vẽ màu hồng";
+        frame ="\nChuẩn bị khung vẽ A0";
         return brush + paper + frame;
     }
-   
-    
 }

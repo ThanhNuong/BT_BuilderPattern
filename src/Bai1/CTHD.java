@@ -11,18 +11,19 @@ package Bai1;
  */
 public class CTHD {
     String sanPham;
-    float soLuong, donGia, chietKhau;
+    int soLuong;
+    float donGia, chietKhau;
 
     public CTHD() {
     }
 
-    public CTHD(String sanPham, float soLuong, float donGia, float chietKhau) {
+    public CTHD(String sanPham, int soLuong, float donGia, float chietKhau) {
         this.sanPham = sanPham;
         this.soLuong = soLuong;
         this.donGia = donGia;
         this.chietKhau = chietKhau;
     }
-
+    
     public String getSanPham() {
         return sanPham;
     }
@@ -35,7 +36,7 @@ public class CTHD {
         return soLuong;
     }
 
-    public void setSoLuong(float soLuong) {
+    public void setSoLuong(int soLuong) {
         this.soLuong = soLuong;
     }
 

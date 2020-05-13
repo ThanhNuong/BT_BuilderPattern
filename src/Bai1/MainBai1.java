@@ -14,17 +14,14 @@ import java.text.SimpleDateFormat;
  */
 public class MainBai1 {
 
-    /**
-     * @param args the command line arguments
-     * @throws java.text.ParseException
-     */
     public static void main(String[] args) throws ParseException {
+        HoaDonHeader hdheader = new HoaDonHeader("HD001", "Thanh Nương", new SimpleDateFormat("dd/mm/yy").parse("10/05/2020"));
+        CTHD cthd1 = new CTHD("Mỹ phẩm chăm sóc da", 100, 5000000,0.7f);
         HoaDon hd1 = new HoaDon.Builder()
-               .addMaHD("HD002")
-                .addTenKH("Thanh Nuong")
-                .addNgayBan(new SimpleDateFormat("dd/MM/yy").parse("04/11/2020"))
+                .addHoaDon(hdheader)
+                .addChiTietHoaDon(cthd1)
                 .build();
-        System.out.println(hd1.toString());
+        System.out.println(hd1.hienThiThongTinChiTietHD());
     }
     
 }

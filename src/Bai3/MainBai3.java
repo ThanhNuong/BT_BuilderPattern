@@ -11,20 +11,19 @@ package Bai3;
  */
 public class MainBai3 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        ShapeFactory hop1 = new ShapeFactory().createInstance();
-        ShapeFactory hop2 = new ShapeFactory().createInstance();
-        ShapeFactory hop3 = new ShapeFactory().createInstance();
-        
+        ShapeFactory hop1 = ShapeFactory.createInstance();
+    
         Shape Hinh1 = hop1.createShape(ShapeType.Circle);
         System.out.println(Hinh1.draw());
-        Shape Hinh2 = hop2.createShape(ShapeType.Triangle);
+      
+        Shape Hinh2 = hop1.createShape(ShapeType.Triangle);
         System.out.println(Hinh2.draw());
-        Shape Hinh3 = hop3.createShape(ShapeType.Rectangle);
+        
+        Shape Hinh3 = hop1.createShape(ShapeType.Rectangle);
         System.out.println(Hinh3.draw());
+        
+        Shape Hinh4 = hop1.createShape(ShapeType.Circle);
+        System.out.println(Hinh4.draw());
     }
-    
 }

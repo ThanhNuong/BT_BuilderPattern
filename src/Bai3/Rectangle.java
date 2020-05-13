@@ -12,21 +12,14 @@ package Bai3;
 public class Rectangle extends Shape{
 
     public Rectangle() {
-        System.out.println("Đây là hình chữ nhật");
+        System.out.println("\nChào các bạn!  Đây là hình Rectangle");
     }
 
-    
-    
    @Override
     public String draw() {
-        brush ="\nVẽ bằng";
-        paper ="\nVẽ giấy ";
-        frame ="\nVẽ khung ";
-        
+        brush ="Chuẩn bị vẽ bằng bút chì màu đen";
+        paper ="\nchuẩn bị giấy vẽ màu trắng";
+        frame ="\nChuẩn bị khung vẽ A4";
         return brush + paper + frame;
     }
-   
-
-   
-    
 }

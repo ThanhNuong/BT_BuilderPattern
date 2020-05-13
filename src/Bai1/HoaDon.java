@@ -6,44 +6,53 @@
 package Bai1;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class HoaDon {
-    HoaDonHeader hdheader;
+    HoaDonHeader hdheader = new HoaDonHeader();
     ArrayList<CTHD> cthd = new ArrayList<>();
 
     public HoaDon(Builder builder) {
         this.hdheader = builder.hdheader;
+        this.cthd = builder.cthd;
     }
 
     @Override
     public String toString() {
-        return "Chi tiết hóa đơn: \n Mã hóa đơn: "+hdheader.getMaHD()+
-                "\nTen khách hàng: "+hdheader.getTenKH()+ "\nNgay bán: "+hdheader.getNgayBan();
+       String hd ="";
+       for(int i=0;i<cthd.size();i++)
+       {
+          hd="\nThong tin sản phẩm thứ "+(i+1)+
+                  "\n Sản phẩm: "   +cthd.get(i).getSanPham()
+                    +"\n Số lượng: "  +cthd.get(i).getSoLuong()
+                    +"\n Đơn giá: "   +cthd.get(i).getDonGia()
+                    +"\n Chiết khấu: "+cthd.get(i).getChietKhau();
+       } return hd;
     }
 
-    
-    
+     public String hienThiThongTinChiTietHD(){
+        return "Thông tin hóa đơn:"
+               +"\nMã Hóa đơn: " + hdheader.getMaHD() +
+                "\nTên khách hàng: " + hdheader.getTenKH() +
+                "\nNgày bán: " + hdheader.getNgayBan()
+               +"\nDanh sách các sản phẩm: " + toString();
+    }
     
     public static class Builder{
-        HoaDonHeader hdheader;
+        HoaDonHeader hdheader = new HoaDonHeader();
         ArrayList<CTHD> cthd = new ArrayList<>();
 
         public Builder() {
         }
         
-        public Builder addMaHD(String maHD){
-            this.hdheader.setMaHD(maHD);
+        public Builder addHoaDon(HoaDonHeader Header)
+        {
+            this.hdheader = Header;
             return this;
         }
-        
-        public Builder addTenKH(String tenKH){
-            this.hdheader.setTenKH(tenKH);
-            return this;
-        }
-        
-        public Builder addNgayBan(Date ngayBan){
-            this.hdheader.setNgayBan(ngayBan);
+               
+        public Builder addChiTietHoaDon(CTHD listHD)
+        {
+            this.cthd.add(listHD);
             return this;
         }
         
@@ -51,5 +60,5 @@ public class HoaDon {
             return new HoaDon(this);
         }
     }
-   
+  
 }

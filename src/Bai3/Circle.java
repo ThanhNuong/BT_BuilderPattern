@@ -12,17 +12,14 @@ package Bai3;
 public class Circle extends Shape{
 
     public Circle() {
-        System.out.println("Day la hinh tron");
+        System.out.println("\nChào các bạn!  Đây là hình Circle");
     }
 
-    
-    
    @Override
     public String draw() {
-        brush ="\nVẽ bằng";
-        paper ="\nVẽ giấy ";
-        frame ="\nVẽ khung ";
-        
+        brush ="Chuẩn bị vẽ bằng bút chì màu đỏ";
+        paper ="\nchuẩn bị giấy vẽ màu trắng";
+        frame ="\nChuẩn bị khung vẽ A4";
         return brush + paper + frame;
     }
    
